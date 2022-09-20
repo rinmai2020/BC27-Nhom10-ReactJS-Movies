@@ -1,0 +1,200 @@
+.ant-dropdown-menu-item {
+  color: #fff;
+}
+.ant-dropdown-menu-item:hover {
+  background-color: #078ea0 !important;
+}
+.anticon .anticon-user {
+  display: flex;
+  align-items: center;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  .logo a {
+    font-size: 30px;
+    // font-style: italic;
+    font-weight: 700;
+    color: #15aabf;
+    background: #fff;
+    padding: 0 8px;
+    cursor: pointer;
+  }
+
+  .menu a {
+    text-decoration: none;
+    color: #15aabf;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 16px;
+    transition: all 0.5s;
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .logout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .name {
+      margin-right: 30px;
+      margin: 0 10px;
+      font-size: 18px;
+      font-weight: 500;
+      color: #15aabf;
+    }
+  }
+
+  .auth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .btnSignin {
+      margin-left: 5px;
+      a {
+        text-decoration: none;
+        padding: 15px 10px;
+        line-height: 0;
+        font-weight: 500;
+        color: #15aabf;
+        opacity: 1;
+        transition: all 0.5s;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.8;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+// mobile
+.overlay-mobile {
+  display: none;
+  position: fixed;
+  top: 64px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.menu-icon {
+  display: none;
+  color: #15aabf;
+}
+
+.header-mobile {
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  padding: 20px;
+  transition: all 0.5s;
+
+  .logo-mobile h1 {
+    background: #15aabf;
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .menu-icon {
+    position: absolute;
+    top: 5px;
+    left: -80px;
+  }
+
+  .logout-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    border-bottom: 1px dotted #15aabf;
+    .name-mobile {
+      margin: 0 10px;
+      font-weight: 500;
+      font-size: 20px;
+    }
+  }
+
+  .auth-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px dotted #15aabf;
+    .btn-mobile {
+      height: 50px;
+      a {
+        text-decoration: none;
+        padding-left: 10px;
+        line-height: 0;
+        font-weight: 500;
+        color: #15aabf;
+        opacity: 1;
+        transition: all 0.5s;
+        &:hover {
+          opacity: 0.8;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .menu-mobile a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #15aabf;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.5s;
+    &:hover {
+      color: #15aabf;
+    }
+  }
+}
+.ant-dropdown-menu {
+  background-color: #15aabf;
+  color: #fff;
+}
+.ant-dropdown {
+  z-index: 9999;
+}
+@media screen and (max-width: 992px) {
+  header {
+    .menu-icon {
+      display: block !important;
+    }
+
+    .menu,
+    .logout,
+    .auth {
+      display: none !important;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    .logo {
+      font-size: 25px;
+    }
+  }
+}

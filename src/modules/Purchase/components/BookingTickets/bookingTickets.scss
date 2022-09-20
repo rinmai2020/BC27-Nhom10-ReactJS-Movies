@@ -1,0 +1,52 @@
+.trapezoid {
+  border-bottom: 50px solid #fff;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  height: 0;
+  width: 100%;
+  opacity: 0.75;
+  filter: drop-shadow(0 26px 19px rgba(255, 255, 255, 0.5));
+  margin-bottom: 40px;
+}
+.screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .textsCreen {
+    color: #15aabf;
+    font-weight: 500;
+  }
+}
+.seat {
+  //ghế thường
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 6px;
+  font-weight: 500;
+  background-color: #fff;
+  color: #000;
+  border: none;
+}
+.seatBooked {
+  background-color: #82c91e;
+  cursor: not-allowed;
+}
+.seatAreBooked {
+  background-color: #15aabf;
+  color: #fff;
+}
+.seatVip {
+  background-color: rgb(288, 74, 8);
+  color: #fff;
+}
+.mySeat {
+  background-color: salmon;
+}
+.scroll {
+  height: 200px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}

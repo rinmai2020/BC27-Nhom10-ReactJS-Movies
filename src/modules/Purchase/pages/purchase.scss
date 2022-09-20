@@ -1,0 +1,31 @@
+.purchase {
+  margin-top: 80px;
+  margin-bottom: 50px;
+  .ant-tabs-tab.ant-tabs-tab-active {
+    z-index: 3;
+    // border-bottom: none !important;
+    border-right: none !important;
+  }
+  .ant-tabs-tab:hover {
+    color: #fff !important;
+  }
+  .ant-tabs-tab.ant-tabs-tab-active {
+    z-index: 3;
+    border-bottom: 3px solid #15aabf !important;
+  }
+  .ant-tabs-content .ant-tabs-content-left {
+    padding-left: 0 !important;
+  }
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: #15aabf !important;
+  }
+  .ant-tabs-left > .ant-tabs-content-holder > .ant-tabs-content > .ant-tabs-tabpane,
+  .ant-tabs-left > div > .ant-tabs-content-holder > .ant-tabs-content > .ant-tabs-tabpane {
+    padding-left: 0px !important;
+  }
+  .styleH1 {
+    font-size: 35px;
+    text-align: center;
+    color: #15aabf;
+  }
+}

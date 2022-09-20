@@ -1,0 +1,21 @@
+.Header {
+  background: rgba(43, 44, 61, 0.9);
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  @media screen and (max-width: 768px) {
+    padding: 0 16px;
+  }
+}
+.Footer {
+  background-color: rgb(29, 30, 48);
+}
+.Content {
+  background-color: rgb(43, 44, 61);
+}
+.ant-layout-footer {
+  padding: 24px 20px !important;
+}

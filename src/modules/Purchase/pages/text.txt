@@ -1,0 +1,115 @@
+//import library
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  Group,
+  Loader,
+  Modal,
+  Space,
+  Title,
+} from "@mantine/core";
+import movieAPI from "apis/movieAPI";
+import useRequest from "hooks/useRequest";
+import { useParams } from "react-router";
+import { useMediaQuery } from "@mantine/hooks";
+//import file
+import TicketsDetail from "../components/TicketsDetail";
+import TicketSelection from "../components/TicketSelection";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import { getTickets } from "../slices/ticketSlices";
+const PurChase = () => {
+  // const { isLoading } = useRequest(() => movieAPI.getTicketOfficeList());
+  const [openedModal, setOpenedModal] = useState(false);
+  const mobileSize = useMediaQuery("(max-width: 576px)");
+  const { tickets, isLoading } = useSelector((state) => state.ticket);
+
+  const dispatch = useDispatch;
+  const { purchaseId, showtimeId } = useParams();
+
+  const { danhSachGhe: seats, thongTinPhim: movieDetail } = tickets || {
+    danhSachGhe: [],
+    thongTinPhim: {},
+  };
+
+  useEffect(() => {
+    dispatch(getTickets(showtimeId));
+  }, [showtimeId]);
+  return (
+    <>
+      {isLoading && (
+        <>
+          <Space h={240} />
+          <Loader size={50} />
+        </>
+      )}
+      {!isLoading && (
+        <Container size={1200}>
+          <Space h={48} />
+          <Title order={1}>Let book your ticket</Title>
+          <>
+            <Space h={48} />
+            <Grid gutter="xl">
+              <Grid.Col sm={8} xs={12} span={mobileSize ? 12 : undefined}>
+                <TicketSelection movieDetail={movieDetail} seats={seats} />
+              </Grid.Col>
+              {!mobileSize && (
+                <Grid.Col sm={4} xs={12} span={mobileSize ? 12 : undefined}>
+                  <TicketsDetail movieDetail={movieDetail} seats={seats} />
+                </Grid.Col>
+              )}
+              <Modal
+                opened={openedModal}
+                onClose={() => setOpenedModal(false)}
+                color="red"
+                transition="rotate-left"
+                centered
+              >
+                <TicketsDetail movieDetail={movieDetail} seats={seats} />
+              </Modal>
+            </Grid>
+          </>
+          {mobileSize && (
+            <Box
+              sx={{
+                height: 80,
+              }}
+            />
+          )}
+        </Container>
+      )}
+
+      {mobileSize && (
+        <Group
+          sx={(theme) => ({
+            position: "fixed",
+            bottom: 0,
+            left: 0,
+            right: 0,
+            width: "100%",
+          })}
+        >
+          <Button
+            onClick={() => setOpenedModal(true)}
+            size="xl"
+            variant="light"
+            fullWidth
+          >
+            Xem vé
+          </Button>
+        </Group>
+      )}
+    </>
+  );
+};
+
+export default PurChase;
+
+// <Container>
+//   <Space h="sm" />
+//   <Title order={1}>Book Ticket </Title>
+//   <TicketSelection purchase={purchaseId} />
+//   <TicketsDetail purchase={purchaseId} />
+// </Container>

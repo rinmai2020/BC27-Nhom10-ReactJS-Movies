@@ -1,0 +1,118 @@
+.Card {
+  border: 2px solid #15aabf;
+  background: white;
+  position: relative;
+  display: block;
+  transition: 0.4s ease-out;
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 314px;
+    background: rgba(black, 0.6);
+    z-index: 2;
+    transition: 0.5s;
+    opacity: 0;
+  }
+  .hoverImg {
+    width: 100%;
+    height: 314px;
+    display: block;
+    position: relative;
+    object-fit: inherit;
+    position: relative;
+    transition: all 0.5s;
+    cursor: pointer;
+    background: white;
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    background-position: center center;
+    &:hover {
+      // filter: brightness(0.5);
+      // position: absolute;
+      opacity: 1;
+    }
+    &::before {
+      content: "";
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 222;
+      background: rgba(black, 0.6);
+    }
+  }
+  .iconPlay {
+    position: absolute;
+    top: 30%;
+    color: #15aabf;
+    font-size: 60px;
+    right: 40%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 222222;
+    transition: all 0.5s;
+    // z-index: 22;
+    &:hover {
+      opacity: 1;
+      // z-index: 22;
+    }
+  }
+}
+.ant-card-body {
+  display: none !important;
+}
+
+.maPhim {
+  background: #15aabf;
+  padding: 0 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+}
+.tenPhim {
+  text-transform: capitalize;
+  color: #15aabf;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.buttonMouse {
+  position: absolute;
+  // left: 0;
+  right: 50px;
+  bottom: 50px;
+  // top: 0;
+  z-index: 999;
+  background: #15aabf;
+}
+.cardbody {
+  &:hover {
+    display: none;
+  }
+}
+.overlay {
+  display: block;
+  position: absolute;
+  height: 280px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+///style swiper

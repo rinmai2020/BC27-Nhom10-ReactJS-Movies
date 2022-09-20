@@ -1,0 +1,65 @@
+@media screen and (max-width: 968px) {
+  .ant-layout {
+    .ant-layout-footer {
+      padding: 24px 20px !important;
+    }
+  }
+}
+.Logo {
+  color: #15aabf;
+  font-weight: 600;
+  font-size: 22px;
+  cursor: pointer;
+}
+.gvm {
+  width: 130;
+  @media screen and (max-width: 960px) {
+    width: 100%;
+  }
+}
+.copyRight {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+.social {
+  display: flex;
+  color: #fff;
+
+  justify-content: flex-end;
+  font-size: 18px;
+  font-weight: 500;
+}
+.App {
+  color: #fff;
+
+  font-size: 30px;
+  font-weight: 500;
+}
+.InfoFooter {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s;
+  a {
+    color: #fff;
+    font-size: 13px;
+    &:hover {
+      color: #15aabf;
+    }
+  }
+}
+.h5 {
+  color: #15aabf;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.5s;
+  &:hover {
+    color: #fff;
+  }
+}
+.footer {
+  display: flex;
+}
